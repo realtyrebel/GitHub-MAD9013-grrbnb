@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+/* make sure to select a new google font and use it for your header */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+html{
+    font-size: 20px;
+    line-height: 1.5;
+    /*font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';*/
+	font-family: "Roboto", sans-serif;
+}
+main{
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid #aaa;
+}
+header{
+    /* Photo by Wyatt Ryan on Unsplash */
+    /* Replace this with an image that you select */
+    background-image: url(../img/puppy_sleeping-wallpaper-1600x800.jpg); /* http://wallpaperswide.com/puppy_sleeping-wallpapers.html */
+    background-size: 100% auto;
+    background-position: center center;
+	background-repeat:no-repeat;
+}
+header h1{
+    font-size: 4rem;
+    line-height: 4rem;
+    padding: 1rem 1rem;
+    color: hsl(4,89%,60%);
+    text-shadow: 2px 2px 4px #835A59;
+    vertical-align: top;
+    text-align: right;
+    min-height: 12rem;
+}
+header img{
+    width: 15%;
+    float:left;
+    margin-right: 1rem;
+}
+form{
+    padding: 1rem 1rem 2rem;
+}
+.form-box{
+    padding: 0.25rem 0 1rem;
+}
+label{
+    display: block;
+    margin: 0;
+    font-size: 1rem;
+    color: #d70c03;/* salmon */
+}
+input{
+    margin:0;
+    font-size: 1rem;
+    padding: 0.2rem 1rem;
+    width: 100%;
+    color: #747675;/* dark grey */
+}
+input#min.price::after,
+input.price#max::after{
+    content: "$" attr(data-price);
+    display: block;
+    margin-top: -1.5rem;
+    color:#d70c03;/* salmon */
+}
+
+.search-btn{
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 0.25rem 1rem;
+    background-color:#d70c03;/* salmon */
+    color: #fff;
+}
+
+/* http://danielstern.ca/range.css/#/ */
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 11.8px 0;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #98190f;/* burgundy */
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 32px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -12px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #af1d11;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #98190f;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 32px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #81150d;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]::-ms-fill-upper {
+  background: #98190f;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]::-ms-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 32px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+  height: 8.4px;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #98190f;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #af1d11;
+}
+@media all and (min-width:650px){
+    form{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .form-box{
+        flex-basis: 100%;
+    }
+    .form-box.check-in,
+    .form-box.check-out,
+    .form-box.min-price,
+    .form-box.max-price,
+    .form-box.dogs,
+    .form-box.search{
+        flex-basis: 50%;
+    }
+    .form-box.search{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items:flex-end;
+    }
+    .form-box.dogs,
+    .form-box.min-price,
+    .form-box.max-price{
+        padding-right: 1rem;
+    }
+}
+@media all and (min-width:1000px){
+    main{
+        display:flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        max-width: 1200px;
+    }
+    header{
+        flex-basis: 30%;
+        background-size: auto 100%;
+    }
+    form{
+        flex-basis: 70%;
+    }
+}
