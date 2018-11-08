@@ -194,6 +194,7 @@ input[type=range]:focus::-ms-fill-upper {
         padding-right: 1rem;
     }
 }
+
 @media all and (min-width:1000px){
     main{
         display:flex;
